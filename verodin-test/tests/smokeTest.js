@@ -14,6 +14,7 @@ const createAccount = new createAccountPageObjects
 let r = Math.random().toString(36).substring(7)
 let email = "test+" + r + "@gmail.com"
 let password = r
+let email2 = "test+"+ r + "@gmail.com"
 
 fixture(`key functionality smoke test`)
     .page(`http://automationpractice.com/`)
@@ -52,7 +53,7 @@ test(`user can create account`, async t =>{
         .click(createAccount.dobMonth)
         .click(createAccount.dobMonthOption.withText('March'))
         .click(createAccount.dobYear)
-        .click(createAccount.dobYearOption.withText('1991'))
+        .click(createAccount.dobYearOption.withText("1991"))
         .expect(createAccount.addressFirstName.value).eql("Hunter")
         .expect(createAccount.addressLastName.value).eql("Savage")
         .typeText(createAccount.addressCompany, "Verodin")
@@ -78,6 +79,12 @@ test(`existing account sign in`, async t =>{
         .typeText(createAccount.passwordSignInInput, password)
         .click(createAccount.signInInput)
         .expect(Selector("title").innerText).eql('My account - My Store')
+})
 
+test(`user can sign up for newsletter and recieve email`,async t =>{
+    await t
+        .typeText(home.newsletterInput, email2)
+        .click(home.newsletterSubmit)
+        .expect(Selector("#columns > p").innerText).eql(" Newsletter : You have successfully subscribed to this newsletter.")
 })
 

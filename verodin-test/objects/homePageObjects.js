@@ -7,5 +7,8 @@ export default class homePageObjects{
         this.searchButton = Selector('#searchbox > button')
         this.dressesTab = Selector('#block_top_menu > ul> li:nth-child(2)')
         this.signInBannerButton = Selector('[class="login"]')
+
+        this.newsletterInput = Selector('#newsletter-input')
+        this.newsletterSubmit = Selector('[name="submitNewsletter"]')
     }
 }
