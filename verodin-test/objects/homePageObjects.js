@@ -1,4 +1,11 @@
+import { Selector } from 'testcafe'
 
-export const searchInput = Selector('#searchbox > input.search_query')
-export const searchButton = Selector('#searchbox > button')
-const searchResults = Selector('div.product-container')
+export default class homePageObjects{
+    constructor(){
+        
+        this.searchInput = Selector('#searchbox > input.search_query')
+        this.searchButton = Selector('#searchbox > button')
+        this.dressesTab = Selector('#block_top_menu > ul> li:nth-child(2)')
+        this.signInBannerButton = Selector('[class="login"]')
+    }
+}
