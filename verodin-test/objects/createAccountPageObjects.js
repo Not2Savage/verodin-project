@@ -3,9 +3,12 @@ import { Selector } from 'testcafe'
 export default class createAccountPageObjects{
     constructor(){
         
+        this.emailSignInInput = Selector('#email')
+        this.passwordSignInInput = Selector('#passwd')
+        this.signInInput = Selector('#SubmitLogin')
+
         this.emailSignUpInput = Selector('#email_create')
         this.emailSignUpSubmit = Selector('#SubmitCreate')
-        
         
         this.titleRadioMale = Selector('[for = "id_gender1"]')
         this.titleRadioFemale = Selector('[for = "id_gender2"]')
@@ -14,11 +17,11 @@ export default class createAccountPageObjects{
         this.emailInput = Selector('#email')
         this.passwordInput = Selector('#passwd')
         this.dobDay = Selector('#days')
-        this.dobDayOption = Selector('#days').find('option')
+        this.dobDayOption = this.dobDay.find('option')
         this.dobMonth = Selector('#months')
-        this.dobMonthOption = Selector('#months').find('option')
+        this.dobMonthOption = this.dobMonth.find('option')
         this.dobYear = Selector('#years')
-        this.dobYearOption = Selector('#years').find('option')
+        this.dobYearOption = this.dobYear.find('option')
         this.addressFirstName = Selector('#firstname')
         this.addressLastName = Selector('#lastname')
         this.addressCompany = Selector('#company')
@@ -26,7 +29,7 @@ export default class createAccountPageObjects{
         this.addressAddress2 = Selector('#address2')
         this.addressCity = Selector('#city')
         this.addressState = Selector('#id_state')
-        this.addressStateOption = Selector('#id_state').find('option')
+        this.addressStateOption = this.addressState.find('option')
         this.addressZip = Selector('#postcode')
         this.addressCountry = Selector('#id_country')
         this.addressCountryOption = this.addressCountry.find('option')

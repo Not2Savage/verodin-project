@@ -71,3 +71,13 @@ test(`user can create account`, async t =>{
         .expect(Selector("title").innerText).eql('My account - My Store')
     })
 
+test(`existing account sign in`, async t =>{
+    await t
+        .click(home.signInBannerButton)
+        .typeText(createAccount.emailSignInInput, email)
+        .typeText(createAccount.passwordSignInInput, password)
+        .click(createAccount.signInInput)
+        .expect(Selector("title").innerText).eql('My account - My Store')
+
+})
+
