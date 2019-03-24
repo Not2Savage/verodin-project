@@ -1,17 +1,3 @@
-# Goals
-It is expected that the tests you create will serve as examples for the second part of the project. You need to provide materials for one of the interviewers to make additional tests using your model. You can expect your audience to be a development engineer who is well versed in the craft but lacking any QA specific skills. You can assume that your "student" is as quick with new technologies and concepts as you are.
-
- 
-
-Prepare sufficient written material to allow your student/reviewer to generate additional tests similar to some that you have already created. While we'll discuss your project with you afterwards, the written materials will be the only avenue for you to instruct your student. You can certainly point to external reference materials for framework setup.
-
- 
-
-The choice of instructional format is up to you. Simplicity and clarity are preferred over flash and art. As an example, Markdown would be preferable to animated slides. Conversely if you feel animated slides and video are essential to your communication, you may submit them.
-
-
-
----
 # Test Goal
 The goal of `smokeTest.js` is to provide a high level test of key functions of the website in order to validate pull requests quickly. For this we test the following functions:
 * Search feature
