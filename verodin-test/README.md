@@ -9,7 +9,7 @@ Prepare sufficient written material to allow your student/reviewer to generate a
 
 The choice of instructional format is up to you. Simplicity and clarity are preferred over flash and art. As an example, Markdown would be preferable to animated slides. Conversely if you feel animated slides and video are essential to your communication, you may submit them.
 
-Next we will setup a fixture which in TestCafe will organize our tests into a certain category for the tests to run. For this type the line `fixture(test description)` underneath the import function. In here we can configure what things we want our tests to use, for example typing `.page(URL)` it will tell all subsequent tests to go to the page set in the fixture when they load.
+
 
 ---
 # Test Goal
@@ -33,12 +33,16 @@ The object class is where we will store all objects for the website each under t
 5. Right click and choose **Copy > Copy Selector**
 
 It will generate a string similar to `#header_logo > a > img`, this is a unique object identier that you can use in youre tests (these can be greatly shortened in many cases but for now lets stick to the basics). To make this into a selector, open up the new object class you created and wrap it in the following: `this.objectName = Selector('your object')`. This will create an object you can call on later.
-### Tests
-To begin setting up the test class create a new file called `myTests.js`. From there you want to import Testcafe by typing `import { Selector } from 'testcafe'`. This will call the Selector function from the Testcafe library so that we can interact with elements on a page.
 
+### Tests
 Tests are where we will take those objects and create a sequential set of objects and actions to replicate a users experience on the website, thus creating e2e tests.
 
-To do this, first setup your tests by adding:
+To begin setting up the test class create a new file called `myTests.js`. From there you want to import Testcafe by typing `import { Selector } from 'testcafe'`. This will call the Selector function from the Testcafe library so that we can interact with elements on a page.
+
+Next we will setup a fixture which in TestCafe will organize our tests into a certain category for the tests to run. For this type the line `fixture(test description)` underneath the import function. In here we can configure what things we want our tests to use, for example typing `.page(URL)` it will tell all subsequent tests to go to the page set in the fixture when they load.
+
+
+Now to start using those objects and adding actions to form a test, to do this, first setup your tests by adding:
 
 `test(test name, async t =>{`
 
