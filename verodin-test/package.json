@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:run": "testcafe chrome tests/**/*.js"
+    "test:smoke": "testcafe chrome tests/**/*.js"
   },
   "keywords": [],
   "dependencies": {
